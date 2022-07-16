@@ -1,0 +1,12 @@
+<template>
+ <!--   
+    <p id="action" class = "slds-box slds-m-around_small slds-text-heading_small">
+        Please Wait... We are Processing Batch Job. <br /> <br />
+        <lightning-icon icon-name = "action:approval" alternative-text = "Approved" title = "Approved" mode ="sticky"></lightning-icon>&nbsp;
+        <span class = "slds-text-heading_large slds-text-color_success"> Successfully Submitted </span>
+    </p>
+-->
+<template if:true={isLoaded}>
+    <lightning-spinner alternative-text="Loading....." size="large" variant="brand"> </lightning-spinner>
+ </template>
+</template>

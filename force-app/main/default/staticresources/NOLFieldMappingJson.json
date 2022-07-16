@@ -1,0 +1,45 @@
+{
+    "Product2": {
+      "Name": "SKU_Name__c",
+      "ProductCode": "SKU_Code__c",
+      "APTS_Product_Pricing_UOM__c": "UOM__c",
+      "Apttus_Config2__Uom__c": "UOM__c"
+    },
+    "Apttus_Config2__PriceListItem__c": {
+      "Apttus_Config2__PriceUom__c": "UOM__c"
+    },
+    "Apttus_Config2__PriceRule__c": {
+      "Name": "SKU_Name__c"
+    },
+    "Apttus_Config2__PriceRuleEntry__c": {
+      "Apttus_Config2__Dimension1Value__c": "SKU_Code__c"
+    },
+    "APTS_Unit_List_Price_1__c": {
+      "Product_Code__c": "SKU_Code__c",
+      "Meter__c": "UOM__c"
+    },
+    "APTS_Size_Relationship__c": {
+      "Meter_Type__c": "UOM__c"
+    },
+    "APTS_Product_Adjustor__c": {
+      "SKU__c": "SKU_Code__c"
+    },
+    "APTS_Industry_Adjustor__c": {
+      "FINS_Meter_Industry__c": "UOM__c"
+    },
+    "APTS_Discount_Guidelines_Max_Limits__c": {
+      "Meter__c": "UOM__c"
+    },
+    "APTS_Deployment_Adjustor__c": {
+      "Meter_Type__c": "UOM__c"
+    },
+    "APTS_Country_Adjustor__c": {
+      "Meter__c": "UOM__c"
+    },
+    "APTS_ACV_Floor__c": {
+      "Product_Code__c": "SKU_Code__c"
+    },
+    "APTS_Price_Quantity__c": {
+      "Product_Code__c": "SKU_Code__c"
+    }
+  }

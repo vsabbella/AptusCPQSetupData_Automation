@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Family__c</fullName>
+    <externalId>false</externalId>
+    <label>Product Family</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Training Credits</fullName>
+                <default>false</default>
+                <label>Training Credits</label>
+            </value>
+            <value>
+                <fullName>ODE</fullName>
+                <default>false</default>
+                <label>ODE</label>
+            </value>
+            <value>
+                <fullName>WAT</fullName>
+                <default>false</default>
+                <label>WAT</label>
+            </value>
+            <value>
+                <fullName>Delivery Assurance</fullName>
+                <default>false</default>
+                <label>Delivery Assurance</label>
+            </value>
+            <value>
+                <fullName>Subscription</fullName>
+                <default>false</default>
+                <label>Subscription</label>
+            </value>
+            <value>
+                <fullName>Deployment Tenant</fullName>
+                <default>false</default>
+                <label>Deployment Tenant</label>
+            </value>
+            <value>
+                <fullName>PPT</fullName>
+                <default>false</default>
+                <label>PPT</label>
+            </value>
+            <value>
+                <fullName>Deployement Strategy Services</fullName>
+                <default>false</default>
+                <label>Deployement Strategy Services</label>
+            </value>
+            <value>
+                <fullName>Instance</fullName>
+                <default>false</default>
+                <label>Instance</label>
+            </value>
+            <value>
+                <fullName>Advisory Services</fullName>
+                <default>false</default>
+                <label>Advisory Services</label>
+            </value>
+            <value>
+                <fullName>Launch Training Package</fullName>
+                <default>false</default>
+                <label>Launch Training Package</label>
+            </value>
+            <value>
+                <fullName>Customer Success</fullName>
+                <default>false</default>
+                <label>Customer Success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

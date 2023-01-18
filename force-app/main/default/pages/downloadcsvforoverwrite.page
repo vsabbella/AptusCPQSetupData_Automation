@@ -1,0 +1,29 @@
+<apex:page controller="Downloadcsvctrl" lightningStylesheets="true">
+    <!-- action="{!initiateDownload}" -->
+    <!--GTMCLS-6035-Start-->
+    <script>
+        setTimeout(() => {
+            onLoad();
+        }, 4000);
+    </script>
+    <apex:slds />
+
+    <apex:form >
+        <apex:actionFunction name="onLoad" action="{!initiateDownload}">
+        </apex:actionFunction>
+    </apex:form>
+
+    <div class="slds-scope">
+        <apex:form id="form" style="height:6rem;">
+           <h1 position="relative" left="40%">Please wait, Generation of file is in Progress ...</h1>
+            <div id="spinner" class="slds-spinner_container">
+                <div role="status" class="slds-spinner slds-spinner--large">
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+            </div>
+        </apex:form>
+    </div>
+
+    <!--GTMCLS-6035-end-->
+</apex:page>

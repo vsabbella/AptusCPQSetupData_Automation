@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overwrite_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Overwrite Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Price List Item</fullName>
+                <default>false</default>
+                <label>Price List Item</label>
+            </value>
+            <value>
+                <fullName>Price Tiers</fullName>
+                <default>false</default>
+                <label>Price Tiers</label>
+            </value>
+            <value>
+                <fullName>Industry Adjustors</fullName>
+                <default>false</default>
+                <label>Industry Adjustors</label>
+            </value>
+            <value>
+                <fullName>ListPrice@1</fullName>
+                <default>false</default>
+                <label>ListPrice@1</label>
+            </value>
+            <value>
+                <fullName>Price Matrix</fullName>
+                <default>false</default>
+                <label>Price Matrix</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,156 @@
+{
+  "Apttus_Config2__PriceListItem__c":{
+    "fields":"APTS_GA_Date__c,APTS_ACV_Floor__c,CurrencyIsoCode,APTS_Ext_ID__c",
+    "CSV_Type__c":"Price List Items",
+    "Overwrite_Type_API__c":"Apttus_Config2__PriceListItem__c",
+    "Setup_Data_Type__c":"Pricing",
+    "Setup_Data_Features__c":"Update the Charge Types for Committed Usage Products. Fields Updated:  Max Pepy, GA Date.."
+
+  },
+  "Product2":{
+    "fields":"SKU_Name__c,SKU_Code__c,APTS_Ext_ID__c",
+    "CSV_Type__c":"Product/ SKU related details",
+    "Overwrite_Type_API__c":"Product2",
+    "Setup_Data_Type__c":"Pricing",
+    "Setup_Data_Features__c":"Product related inforamtion. Fields updated : Metric Name, Metric Definition etc.."
+
+  },
+  "APTS_Price_Matrix__c":{
+    "fields":"APTS_Max_Quantity__c,APTS_Min_Quantity__c,APTS_End_Date__c,APTS_Start_Date__c,APTS_Product_Code__c,APTS_Adjustment_Amount__c,CurrencyIsoCode,APTS_Ext_ID__c",
+    "CSV_Type__c":"List Price",
+    "Overwrite_Type_API__c":"APTS_Price_Matrix__c",
+    "Setup_Data_Type__c":"Pricing",
+    "Setup_Data_Features__c":"List price and price tier information. Fields Updated are Currency, Start Date, End Date, Adjustment Amount, Min Qty, Max Quantity"
+
+  },
+  "APTS_Price_Quantity__c":{
+    "fields":"APTS_FSE_Quantity__c,APTS_Max_FSE_Count__c,APTS_Min_FSE_Count__c,Active__c,Adjustment_Amount__c,CurrencyIsoCode,End_Date__c,Start_Date__c,Name,Product_Code__c",
+    "CSV_Type__c":"Quantity Round up",
+    "Overwrite_Type_API__c":"APTS_Price_Quantity__c",
+    "Setup_Data_Type__c":"Pricing",
+    "Setup_Data_Features__c":"Round Quantity Logic settings. Fields updated : Min Qty, Max Qty, Currency, Product Code"
+  },
+  "APTS_Unit_List_Price_1__c":{
+    "fields":"APTS_Tier__c,CurrencyIsoCode,Currency_Value__c,Currency__c,End_Date__c,Start_Date__c,Meter__c,Name,Product_Code__c",
+    "CSV_Type__c":"List Price @ 1",
+    "Overwrite_Type_API__c":"APTS_Unit_List_Price_1__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Fields Updated are Currency, Start Date, End Date, Meter, Tier and Product Code"
+
+  },
+  "APTS_Size_Relationship__c":{
+    "fields":"Adjuster__c,CurrencyIsoCode,End_Date__c,Start_Date__c,Meter_Type__c,Name",
+    "CSV_Type__c":"Size Relationship for DG",
+    "Overwrite_Type_API__c":"APTS_Size_Relationship__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Fields Updated are Currency, Start Date, End Date,Meter and Name"
+
+  },
+  "APTS_ACV_Floor__c":{
+    "fields":"ACV_Floor__c,CurrencyIsoCode,End_Date__c,Start_Date__c,Name,Product_Code__c",
+    "CSV_Type__c":"ACV Floor",
+    "Overwrite_Type_API__c":"APTS_ACV_Floor__c",
+    "Setup_Data_Type__c":"Pricing",
+    "Setup_Data_Features__c":"ACV Floor information : Fields Updated are Currency, Start Date, End Date, Product Code"
+
+  },
+  "APTS_Country_Adjustor__c":{
+    "fields":"Name,Country__c,CurrencyIsoCode,End_Date__c,Start_Date__c,Meter__c,Adjuster__c",
+    "CSV_Type__c":"Country Adjustor for DG",
+    "Overwrite_Type_API__c":"APTS_Country_Adjustor__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Country Adjustor for discount guidelines: Fields Updated are Currency, Start Date, End Date, Meter"
+
+  },
+  "APTS_Deployment_Adjustor__c":{
+    "fields":"CurrencyIsoCode,End_Date__c,Start_Date__c,Launch__c,Meter_Type__c,Name,Your_Way__c",
+    "CSV_Type__c":"Deployment Adjustor for DG",
+    "Overwrite_Type_API__c":"APTS_Deployment_Adjustor__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Deployment Adjustor for discount guidelines: Fields Updated are Currency,End Date,Start Date,Launch,Meter Type,Name,Your Way"
+  },
+  "APTS_Discount_Guidelines_Max_Limits__c":{
+    "fields":"CurrencyIsoCode,End_Date__c,Start_Date__c,Max_Limit__c,Meter__c,Name",
+    "CSV_Type__c":"Max Limits for DG",
+    "Overwrite_Type_API__c":"APTS_Discount_Guidelines_Max_Limits__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Max Limits for discount guidelines: Fields Updated are End Date,Start Date,Max Limit,Meter"
+  },
+  "APTS_Product_Adjustor__c":{
+    "fields":"CurrencyIsoCode,End_Date__c,Start_Date__c,Name,Percent__c,SKU__c",
+    "CSV_Type__c":"Product Adjustor Setings for DG",
+    "Overwrite_Type_API__c":"APTS_Product_Adjustor__c",
+    "Setup_Data_Type__c":"Dynamic Pricing",
+    "Setup_Data_Features__c":"Product Adjustor settings for discount guidelines: Fields Updated are Currency, Start Date, End Date, Adjustment Amount, Min Qty, Max Quantity"
+  },
+  "NOL_Qual_Form__c":{
+    "fields":"BDM_Recommended_Fit__c,PreSales_Customer_Fit__c,PreSales_Recommended_Fit__c",
+    "CSV_Type__c":"Product Qualification: Qual form record details",
+    "Overwrite_Type_API__c":"NOL_Qual_Form__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Data. Fields updated are BDM Recommendee Fit,PreSales_Customer_Fit,PreSales Recommended Fit"
+  },
+  "NOL_Template_Question__c":{
+    "fields":"Order__c,PQ_Obj_Field_To_Sync_Ans__c,PQ_Obj_Field_To_Sync_Ans_When__c,Section__c",
+    "CSV_Type__c":"Product Qualification: Template Question Data.",
+    "Overwrite_Type_API__c":"NOL_Template_Question__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated are BDM Recommendee Fit,PreSales_Customer_Fit,PreSales Recommended Fit"
+  },
+  "NOL_Template_Fit_Formula__c":{
+    "fields":"Fit_Type__c,NOL_Template_Questions_List__c",
+    "CSV_Type__c":"Product Qualification: Template fit formulas records. ",
+    "Overwrite_Type_API__c":"NOL_Template_Fit_Formula__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Data. Fields updated are Fit Type,NOL Template Questions List"
+  },
+  "NOL_Template__c":{
+    "fields":"Product__c,Current_Active_Template_Check__c,End_Date__c,Is_Active__c,Start_Date__c",
+    "CSV_Type__c":"Product Qualification: Template data.",
+    "Overwrite_Type_API__c":"NOL_Template__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated are Product,Current Active Template Check,End Date,Is Active,Start Date"
+  },
+  "NOL_Question_Response__c":{
+    "fields":"Answer__c,Is_Active__c,Operator__c,Score__c",
+    "CSV_Type__c":"Product Qualification: Question Responses",
+    "Overwrite_Type_API__c":"NOL_Question_Response__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Data. Fields updated are Answer__c,Is_Active__c,Operator__c,Score__c"
+  },
+  "NOL_Question_Options__c":{
+    "fields":"NOL_Question__r.Name,NOL_Question__r.Question_Title__c,CurrencyIsoCode,Is_Active__c,Option__c",
+    "CSV_Type__c":"Product Qualification: Question Options",
+    "Overwrite_Type_API__c":"NOL_Question_Options__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated are Is_Active__c,Option__c"
+  },
+  "NOL_Qual_Question_Response__c":{
+    "fields":"NOL_Qual_Question__r.Name,NOL_Qual_Question__r.Order__c,NOL_Qual_Question__r.Question_Title__c,Operator__c,Score__c",
+    "CSV_Type__c":"Product Qualification: Qual Question Responses",
+    "Overwrite_Type_API__c":"NOL_Qual_Question_Response__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Data. Fields updated are Operator__c,Score__c"
+  },
+  "NOL_Qual_Question_Option__c":{
+    "fields":"NOL_Qual_Question__r.Question_Title__c,Option__c",
+    "CSV_Type__c":"Product Qualification: Qual Question Options",
+    "Overwrite_Type_API__c":"NOL_Qual_Question_Option__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated Question options"
+  },
+  "NOL_Qual_Question__c":{
+    "fields":"Order__c,Answer__c,Parent_Question__c,Parent_Question_Criteria__c,Section__c,Type__c,Help_Text__c",
+    "CSV_Type__c":"Product Qualification: Qual Questions",
+    "Overwrite_Type_API__c":"NOL_Qual_Question__c",
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated areOrder, Answer, Parent Question, Parent Question Criteria, Section, Type, Question Title, Help Text"
+  },
+  "NOL_Qual_Fit_Formula__c":{
+    "fields":"Fit_Type__c,NOL_Qual_Questions_List__c",
+    "CSV_Type__c":"Product Qualification: Qual Fit Formulas",
+    "Overwrite_Type_API__c":"NOL_Qual_Fit_Formula__c",  
+    "Setup_Data_Type__c":"Product Qualification",
+    "Setup_Data_Features__c":"Product Qualification Template Question Data. Fields updated are Fit Type,NOL Qual Questions List"
+  }
+}

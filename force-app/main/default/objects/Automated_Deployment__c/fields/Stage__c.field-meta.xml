@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Request Created</fullName>
+                <default>false</default>
+                <label>Request Created</label>
+            </value>
+            <value>
+                <fullName>Product Manager Approved</fullName>
+                <default>false</default>
+                <label>Product Manager Approved</label>
+            </value>
+            <value>
+                <fullName>Pricing &amp; Packaging Finalized</fullName>
+                <default>false</default>
+                <label>Pricing &amp; Packaging Finalized</label>
+            </value>
+            <value>
+                <fullName>Order form Finalized</fullName>
+                <default>false</default>
+                <label>Order form Finalized</label>
+            </value>
+            <value>
+                <fullName>Quoting Set Up Complete</fullName>
+                <default>false</default>
+                <label>Quoting Set Up Complete</label>
+            </value>
+            <value>
+                <fullName>Deployment Scorecard Setup</fullName>
+                <default>false</default>
+                <label>Deployment Scorecard Setup</label>
+            </value>
+            <value>
+                <fullName>WoW Integration Ready</fullName>
+                <default>false</default>
+                <label>WoW Integration Ready</label>
+            </value>
+            <value>
+                <fullName>Change Approved</fullName>
+                <default>false</default>
+                <label>Change Approved</label>
+            </value>
+            <value>
+                <fullName>Pricing Change Deployed</fullName>
+                <default>false</default>
+                <label>Pricing Change Deployed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

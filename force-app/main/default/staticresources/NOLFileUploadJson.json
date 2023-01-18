@@ -1,0 +1,21 @@
+{
+    "Apttus_Config2__PriceListItem__c" : "Apttus_Config2__PriceListId__c",
+    "Apttus_Config2__ClassificationHierarchy__c" : "Apttus_Config2__HierarchyId__c,Apttus_Config2__AncestorId__c,Apttus_Config2__ProductAttributeGroupId__c",
+    "Apttus_Config2__ProductOptionGroup__c" : "Apttus_Config2__OptionGroupId__c,Apttus_Config2__ProductId__c,Apttus_Config2__ProductAttributeGroupMemberId__c,Apttus_Config2__RootOptionGroupId__c",
+    "Apttus_Config2__ProductClassification__c" : "Apttus_Config2__ClassificationId__c",
+    "Apttus_Config2__ProductOptionComponent__c" : "Apttus_Config2__ParentProductId__c,Apttus_Config2__ProductOptionGroupId__c",
+    "Apttus_Config2__PriceRule__c" : "Apttus_Config2__RulesetId__c,Apttus_Config2__Dimension1Id__c,Apttus_Config2__Dimension2Id__c",
+    "Apttus_Config2__PriceRuleEntry__c" : "Apttus_Config2__PriceRuleId__c",
+	"Product_Detail__c" : "Opportunity__c,RecordTypeId",
+	"NOL_Qual_Form__c" : "NOL_Template__c,Product_Qualification__c",
+	"NOL_Qual_Question__c" : "NOL_Qual_Form__c",
+	"NOL_Qual_Question_Option__c" : "NOL_Qual_Question__c",
+	"NOL_Qual_Question_Response__c" : "NOL_Qual_Question__c",
+	"NOL_Qual_Fit_Formula__c" : "NOL_Qual_Form__c",
+	"NOL_Template_Question__c" : "NOL_Template__c,NOL_Question__c",
+	"NOL_Question_Options__c" : "NOL_Question__c",
+	"NOL_Question_Response__c" : "NOL_Question__c",
+	"NOL_Template_Fit_Formula__c" : "NOL_Template__c",
+	"Apttus_Config2__ConstraintRuleCondition__c" : "Apttus_Config2__ConstraintRuleId__c,Apttus_Config2__ProductId__c",
+	"Apttus_Config2__ConstraintRuleAction__c" : "Apttus_Config2__ConstraintRuleId__c,Apttus_Config2__ProductGroupId__c"
+} 

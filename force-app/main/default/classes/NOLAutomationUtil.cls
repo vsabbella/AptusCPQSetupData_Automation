@@ -245,8 +245,7 @@ public with sharing class NOLAutomationUtil {
         }
     }
 
-    public static Automated_Deployment__c getProductCodeName(String automatedDeploymentId){
-        //Automated_Deployment__c ad = [SELECT ID, SKU_Code__c,SKU_Name__c from Automated_Deployment__c where ID =: automatedDeploymentId];
+    public static Automated_Deployment__c getProductDetails(String automatedDeploymentId){
         Automated_Deployment__c ad = [SELECT ID, SKU_Code__c,SKU_Name__c,UOM__c,Upgrade_fee_Multiplier__c,CategoryHierarchy__c from Automated_Deployment__c where ID =: automatedDeploymentId]; //GTMCLS-5302 -added parameter-Upgrade_fee_Multiplier__c
 
         return ad;
@@ -298,20 +297,18 @@ public with sharing class NOLAutomationUtil {
         
     }
 
-    public static void overWriteParentReference(String SObjectName, List<String> lookupFields, Object ObjInstance, Sobject sobj,Schema.DescribeSobjectResult dsr,String skuCode, Set<String> externalIdSet){
-        Map<String,String> optionGroupMapping = new Map<String,String>{'Recruiting'=>'OM - Recruiting'};
-        List<Apttus_Config2__ClassificationHierarchy__c> classHier_List= [Select Id,name,Apttus_Config2__Label__c,APTS_Ext_ID__c  from Apttus_Config2__ClassificationHierarchy__c where Name = 'OM - Recruiting' and Apttus_Config2__ProductCount__c >0];
+    public static void overWriteParentReference(String SObjectName, List<String> lookupFields, Object ObjInstance, Sobject sobj,Schema.DescribeSobjectResult dsr,String skuCode, Set<String> externalIdSet, String categoryHierarchy){
+       
+        List<Apttus_Config2__ClassificationHierarchy__c> classHier_List= [Select Id,name,Apttus_Config2__Label__c,APTS_Ext_ID__c  from Apttus_Config2__ClassificationHierarchy__c where ID=: categoryHierarchy and Apttus_Config2__ProductCount__c >0];
         if(SObjectName=='Apttus_Config2__ProductClassification__c'){
             sobj.put('Apttus_Config2__ClassificationId__c',classHier_List[0].Id);
             sobj.putSObject('Apttus_Config2__ClassificationId__r', null);
         }
         if(SObjectName=='Apttus_Config2__ProductOptionComponent__c'){
-            List<Apttus_Config2__ProductOptionGroup__c> optionGroupList = [Select Id,name,Apttus_Config2__OptionGroupId__r.Apttus_Config2__Label__c  from Apttus_Config2__ProductOptionGroup__c where Apttus_Config2__OptionGroupId__r.Name = 'OM - Recruiting'];
+            List<Apttus_Config2__ProductOptionGroup__c> optionGroupList = [Select Id,name,Apttus_Config2__OptionGroupId__r.Apttus_Config2__Label__c  from Apttus_Config2__ProductOptionGroup__c where Apttus_Config2__OptionGroupId__c =: categoryHierarchy];
             sobj.put('Apttus_Config2__ProductOptionGroupId__c',optionGroupList[0].Id);
             sobj.putSObject('Apttus_Config2__ProductOptionGroupId__r', null);
-        }
-        //Apttus_Config2__ProductOptionGroupId__c
-        
+        }        
         return;
       }
 

@@ -130,7 +130,7 @@ VERSION  AUTHOR            DATE             DETAIL          Change Request
 public with sharing class NOLFileUploadBatchApexHelper {
 
     public static Set<String> customSettingsNameSet = new Set<String>{'APTS_Price_Quantity__c','APTS_Unit_List_Price_1__c','APTS_Size_Relationship__c','APTS_Product_Adjustor__c','APTS_Industry_Adjustor__c','APTS_Discount_Guidelines_Max_Limits__c','APTS_Deployment_Adjustor__c','APTS_Country_Adjustor__c','APTS_ACV_Floor__c','APTS_Discount_Guidelines_NonStd_SKU__c','APTS_SKU_Relationship_Size_Baseline__c','APTS_Master_Sku_List__c'};//GTMCLS-5556 : Added Custom settings 
-
+    public static Boolean isCategoryAvailable = false;
     public NOLFileUploadBatchApexHelper() {
     }
 
@@ -139,8 +139,12 @@ public with sharing class NOLFileUploadBatchApexHelper {
 
         Set<String> skipForOptionGroupDefaut = new Set<String>{'Apttus_Config2__ClassificationName__c','Apttus_Config2__ClassificationHierarchy__c','Apttus_Config2__ProductOptionGroup__c'};
         
-        Automated_Deployment__c ac = NOLAutomationUtil.getProductCodeName(automatedDeploymentId);//GTMCLS-5567 : ssriv 
+        Automated_Deployment__c ac = NOLAutomationUtil.getProductDetails(automatedDeploymentId);//GTMCLS-5567 : ssriv 
         String skuCode = (ac != null && String.isNotBlank(ac.SKU_Code__c)) ?  ac.SKU_Code__c : '';//GTMCLS-5567 : ssriv 
+        
+        if(ac.CategoryHierarchy__c != null){
+            isCategoryAvailable = true;
+        }
 
         Map<String,List<String>> lookupFieldMap = getLookUpDataForSobjects();
 
@@ -183,7 +187,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
             System.debug(LoggingLevel.ERROR,'Processing CSV for Object :'+csvTitle);
             
             // donot upsert option group data as we are using existing data by querying -vsabbella
-            if(skipForOptionGroupDefaut.contains(csvTitle)){
+            if(skipForOptionGroupDefaut.contains(csvTitle) && isCategoryAvailable){
                 continue;
             }
             
@@ -196,7 +200,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
     
                     String sobjJSON = NOLAutomationUtil.parseCSVtoJSONandFormat(cvInstance);
     
-                    List<Sobject> sobjectList = processRecords(csvTitle, sobjJSON,lookupFieldMap,automatedDeploymentId,skuCode,externalIdSet); //GTMCLS-5567 : ssriv 
+                    List<Sobject> sobjectList = processRecords(csvTitle, sobjJSON,lookupFieldMap,automatedDeploymentId,skuCode,externalIdSet,ac.CategoryHierarchy__c); //GTMCLS-5567 : ssriv 
                     importProcessedRecords(sobjectList,automatedDeploymentId,csvTitle,true);
                 }
             }
@@ -209,7 +213,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
 
                     String sobjJSON = NOLAutomationUtil.parseStaticResourceToJsonAndFormat(srBody,csvTitle);
 
-                    List<Sobject> sobjectList = processRecords(csvTitle, sobjJSON,lookupFieldMap,automatedDeploymentId,skuCode,externalIdSet); //GTMCLS-5567 : ssriv 
+                    List<Sobject> sobjectList = processRecords(csvTitle, sobjJSON,lookupFieldMap,automatedDeploymentId,skuCode,externalIdSet,ac.CategoryHierarchy__c); //GTMCLS-5567 : ssriv 
 
                     importProcessedRecords(sobjectList,automatedDeploymentId,csvTitle,true);
                 }
@@ -236,7 +240,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
 
     }
 
-    public static List<Sobject> processRecords(String csvTitle, String sobjJSON, Map<String,List<String>> lookupFieldMap,String automatedDeploymentId, String skuCode,Set<String> externalIdSet){//GTMCLS-5567 : ssriv 
+    public static List<Sobject> processRecords(String csvTitle, String sobjJSON, Map<String,List<String>> lookupFieldMap,String automatedDeploymentId, String skuCode,Set<String> externalIdSet, String categoryHierarchy){//GTMCLS-5567 : ssriv 
         String apexType = 'List<'+csvTitle+'>';
 
         Schema.DescribeSobjectResult[] dsrList = Schema.describeSObjects(new List<String>{csvTitle});
@@ -252,7 +256,9 @@ public with sharing class NOLFileUploadBatchApexHelper {
                 NOLAutomationUtil.getSobjectWithParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet);//GTMCLS-5567 : ssriv 
                 
                 // overwrite parent reference for option group to use existing option category and option groups. 
-                NOLAutomationUtil.overWriteParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet);
+                if(isCategoryAvailable){
+                    NOLAutomationUtil.overWriteParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet,categoryHierarchy);
+                }
                 sobjectList.add(sobj);
 
             }
@@ -330,24 +336,6 @@ public with sharing class NOLFileUploadBatchApexHelper {
                         }
                     }else{
                         sobj.put(mappingkey,null);
-                    }
-                    //remove from here. 
-                    if('Apttus_Config2__ProductClassification__c'.equals(csvTitle)){
-                        if(sobj.get('Apttus_Config2__ClassificationId__c') != null){
-                            sobj.putSobject('Apttus_Config2__ClassificationId__r',null);
-                        }
-                       // if(sobj.getSObject('Apttus_Config2__ClassificationId__r') != null){
-                          //  sobj.put('Apttus_Config2__ClassificationId__c',null);
-                      //  }
-                    }
-
-                    if('Apttus_Config2__ProductOptionGroup__c'.equals(csvTitle)){
-                        if(sobj.get('Apttus_Config2__OptionGroupId__c') != null){
-                            sobj.putSobject('Apttus_Config2__OptionGroupId__r',null);
-                        }
-                        if(sobj.get('Apttus_Config2__RootOptionGroupId__c') != null){
-                            sobj.putSobject('Apttus_Config2__RootOptionGroupId__r',null);
-                        }
                     }
                 }
             }

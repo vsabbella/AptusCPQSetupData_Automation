@@ -53,7 +53,7 @@ public with sharing class NOLAutomationScriptsTester {
                     SObject sobj = (SObject)JSON.deserialize(ObjJSON, Type.forName(csvTitle));
                     
                     
-                    NOLAutomationUtil.getSobjectWithParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr);
+                    //NOLAutomationUtil.getSobjectWithParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr);
                     //getSobjectWithParentReference(csvTitle,lookupFields,ObjInstance,sobj,dsr);
                     sobjectList.add(sobj);
 

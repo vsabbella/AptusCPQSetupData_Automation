@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACV_Cate__c</fullName>
+    <externalId>false</externalId>
+    <label>ACV Categorization(Del)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>People Management ACV</fullName>
+                <default>false</default>
+                <label>People Management ACV</label>
+            </value>
+            <value>
+                <fullName>Core Financials ACV</fullName>
+                <default>false</default>
+                <label>Core Financials ACV</label>
+            </value>
+            <value>
+                <fullName>Financials Plus ACV</fullName>
+                <default>false</default>
+                <label>Financials Plus ACV</label>
+            </value>
+            <value>
+                <fullName>Success Plan ACV</fullName>
+                <default>false</default>
+                <label>Success Plan ACV</label>
+            </value>
+            <value>
+                <fullName>Uncategorized ACV</fullName>
+                <default>false</default>
+                <label>Uncategorized ACV</label>
+            </value>
+            <value>
+                <fullName>Sourcing ACV</fullName>
+                <default>false</default>
+                <label>Sourcing ACV</label>
+            </value>
+            <value>
+                <fullName>Planning ACV</fullName>
+                <default>false</default>
+                <label>Planning ACV</label>
+            </value>
+            <value>
+                <fullName>Peakon ACV</fullName>
+                <default>false</default>
+                <label>Peakon ACV</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

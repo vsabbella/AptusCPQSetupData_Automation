@@ -663,15 +663,17 @@ public with sharing class NOLAutomationUtil {
 
     public static void overWriteParentReference(String SObjectName, List<String> lookupFields, Object ObjInstance, Sobject sobj,Schema.DescribeSobjectResult dsr,String skuCode, Set<String> externalIdSet){
         Map<String,String> optionGroupMapping = new Map<String,String>{'Recruiting'=>'OM - Recruiting'};
-        List<Apttus_Config2__ClassificationHierarchy__c> prodclassList= [Select Id,name,Apttus_Config2__Label__c,APTS_Ext_ID__c  from Apttus_Config2__ClassificationHierarchy__c where Name = 'OM - Recruiting' and Apttus_Config2__ProductCount__c >0];
+        List<Apttus_Config2__ClassificationHierarchy__c> classHier_List= [Select Id,name,Apttus_Config2__Label__c,APTS_Ext_ID__c  from Apttus_Config2__ClassificationHierarchy__c where Name = 'OM - Recruiting' and Apttus_Config2__ProductCount__c >0];
         if(SObjectName=='Apttus_Config2__ProductClassification__c'){
-            sobj.put('Apttus_Config2__ClassificationId__c',prodclassList[0].Id);
+            sobj.put('Apttus_Config2__ClassificationId__c',classHier_List[0].Id);
             sobj.putSObject('Apttus_Config2__ClassificationId__r', null);
         }
-        if(SObjectName=='Apttus_Config2__ProductOptionGroup__c'){
-            sobj.put('Apttus_Config2__OptionGroupId__c',prodclassList[0].Id);
-            sobj.putSObject('Apttus_Config2__OptionGroupId__r', null);
+        if(SObjectName=='Apttus_Config2__ProductOptionComponent__c'){
+            List<Apttus_Config2__ProductOptionGroup__c> optionGroupList = [Select Id,name,Apttus_Config2__OptionGroupId__r.Apttus_Config2__Label__c  from Apttus_Config2__ProductOptionGroup__c where Apttus_Config2__OptionGroupId__r.Name = 'OM - Recruiting'];
+            sobj.put('Apttus_Config2__ProductOptionGroupId__c',optionGroupList[0].Id);
+            sobj.putSObject('Apttus_Config2__ProductOptionGroupId__r', null);
         }
+        //Apttus_Config2__ProductOptionGroupId__c
         
         return;
       }

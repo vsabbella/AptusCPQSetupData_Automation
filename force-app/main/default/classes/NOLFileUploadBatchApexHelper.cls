@@ -182,7 +182,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
 
             System.debug(LoggingLevel.ERROR,'Processing CSV for Object :'+csvTitle);
             
-            // donot upsert option group data as we are using existing data by querying -vs
+            // donot upsert option group data as we are using existing data by querying -vsabbella
             if(skipForOptionGroupDefaut.contains(csvTitle)){
                 continue;
             }
@@ -252,7 +252,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
                 NOLAutomationUtil.getSobjectWithParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet);//GTMCLS-5567 : ssriv 
                 
                 // overwrite parent reference for option group to use existing option category and option groups. 
-                //NOLAutomationUtil.getSobjectWithParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet);
+                NOLAutomationUtil.overWriteParentReference(csvTitle,lookupFields_Sobj,obj,sobj,dsr,skuCode,externalIdSet);
                 sobjectList.add(sobj);
 
             }
@@ -331,6 +331,7 @@ public with sharing class NOLFileUploadBatchApexHelper {
                     }else{
                         sobj.put(mappingkey,null);
                     }
+                    //remove from here. 
                     if('Apttus_Config2__ProductClassification__c'.equals(csvTitle)){
                         if(sobj.get('Apttus_Config2__ClassificationId__c') != null){
                             sobj.putSobject('Apttus_Config2__ClassificationId__r',null);

@@ -14,7 +14,7 @@ VERSION   AUTHOR                DATE            DETAIL
   */
 
 public with sharing class NOLAutomationUtil {
-    public NOLAutomationUtil() { 
+    public NOLAutomationUtil() {    
     }
 
         // reuse this method in other methods where parsing is required.   

@@ -1,7 +1,6 @@
 /**
  * JsonToCSVUtility Class
  * This class has helper functiones to convert json string to csv
- * @author - Manish Choudhari
  * */
 public class JsontoCSVUtility {
     
@@ -13,7 +12,6 @@ public class JsontoCSVUtility {
      * @param columnRowMAp - This will be final outcome after process key value pairs of a map
      * @param prefix - Prefix will be used to append key in front of inner object values
      * @param typeColumn - This will be used to create verticle type columns
-     * @author - Manish Choudhari
      * */
     public static Map<String, List<Object>> processJsonObject(Object jsonObject, Map<String, List<Object>> columnRowMap, String prefix, Set<String> typeColumns){
         if(jsonObject != null){

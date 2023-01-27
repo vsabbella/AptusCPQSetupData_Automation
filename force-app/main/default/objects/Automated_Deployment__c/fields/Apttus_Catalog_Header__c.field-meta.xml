@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Apttus_Catalog_Header__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Displays product under this section in catalog. It takes precedence over Option group name field.</inlineHelpText>
+    <label>Apttus Catalog Header</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Apttus_Config2__ClassificationHierarchy__c.Apttus_Config2__ProductCount__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Apttus_Config2__ClassificationHierarchy__c</referenceTo>
+    <relationshipLabel>Automated New Offers</relationshipLabel>
+    <relationshipName>Automated_New_Offers</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -3,7 +3,8 @@
     <fullName>ISA_Identifier__c</fullName>
     <externalId>false</externalId>
     <label>ISA Identifier</label>
-    <required>true</required>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>

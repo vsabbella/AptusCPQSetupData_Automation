@@ -4,7 +4,7 @@
     <externalId>false</externalId>
     <label>Product Guidance</label>
     <length>500</length>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>LongTextArea</type>
     <visibleLines>3</visibleLines>

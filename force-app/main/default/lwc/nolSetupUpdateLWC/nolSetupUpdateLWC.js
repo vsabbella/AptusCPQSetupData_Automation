@@ -4,7 +4,7 @@ import loadData from '@salesforce/apex/NOLSetupUpdateController.loadData';
 import { NavigationMixin } from 'lightning/navigation';
 import { CloseActionScreenEvent } from 'lightning/actions';
 
-export default class NolSetupUpdateLWC extends NavigationMixin(LightningElement) {
+export default class NolSetupUpdateLWC extends  NavigationMixin(LightningElement) {
   // @api recordId;
   error;
   isLoadeding = false;

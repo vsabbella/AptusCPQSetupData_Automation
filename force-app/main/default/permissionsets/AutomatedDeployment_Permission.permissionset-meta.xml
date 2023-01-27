@@ -32,6 +32,10 @@
         <apexClass>NOLRollbackController</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>NOLSetupUpdateController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <fieldPermissions>
         <editable>true</editable>
         <field>Automated_Deployment__c.ACV_Cate__c</field>
@@ -55,6 +59,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Automated_Deployment__c.Apttus_Catalog_Group_Header__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Automated_Deployment__c.Apttus_Catalog_Header__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -84,7 +93,22 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Automated_Deployment__c.Include_in_Analytics_ACV__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Automated_Deployment__c.Include_in_Core_Fins_ACV__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Automated_Deployment__c.Include_in_Financials_ACV__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Automated_Deployment__c.Include_in_People_Mgmt_ACV__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -95,6 +119,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Automated_Deployment__c.Include_in_Sourcing_ACV__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Automated_Deployment__c.Include_in_Uncategorized_ACV__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -135,6 +164,11 @@
     <fieldPermissions>
         <editable>true</editable>
         <field>Automated_Deployment__c.Notes__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Automated_Deployment__c.Option_Group_Name__c</field>
         <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -314,11 +348,6 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
-        <field>Overwrite_Setup__c.Overwrite_Type__c</field>
-        <readable>true</readable>
-    </fieldPermissions>
-    <fieldPermissions>
-        <editable>true</editable>
         <field>Overwrite_Setup__c.RollBackIds__c</field>
         <readable>true</readable>
     </fieldPermissions>
@@ -367,6 +396,10 @@
         <object>Overwrite_Setup__c</object>
         <viewAllRecords>true</viewAllRecords>
     </objectPermissions>
+    <pageAccesses>
+        <apexPage>downloadcsvforoverwrite</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
     <tabSettings>
         <tab>Automated_Deployment__c</tab>
         <visibility>Visible</visibility>

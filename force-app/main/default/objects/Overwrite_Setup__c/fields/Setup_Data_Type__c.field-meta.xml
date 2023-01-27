@@ -22,6 +22,11 @@
                 <default>false</default>
                 <label>Dynamic Pricing</label>
             </value>
+            <value>
+                <fullName>Product Qualification</fullName>
+                <default>false</default>
+                <label>Product Qualification</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

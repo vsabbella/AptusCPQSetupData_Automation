@@ -3,10 +3,12 @@
     <fullName>Price_Lists__c</fullName>
     <deleteConstraint>SetNull</deleteConstraint>
     <externalId>false</externalId>
-    <label>Price Lists</label>
+    <label>Price Lists(D)</label>
     <referenceTo>Apttus_Config2__PriceList__c</referenceTo>
+    <relationshipLabel>Automated New Offers</relationshipLabel>
     <relationshipName>Automated_Deployments</relationshipName>
     <required>false</required>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Lookup</type>
 </CustomField>

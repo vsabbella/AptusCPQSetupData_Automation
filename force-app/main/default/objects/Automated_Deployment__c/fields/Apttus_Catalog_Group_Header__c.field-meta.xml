@@ -17,9 +17,99 @@
                 <label>N/A</label>
             </value>
             <value>
-                <fullName>Committed Usage Group</fullName>
+                <fullName>Core Human Capital Management</fullName>
                 <default>false</default>
-                <label>Committed Usage Group</label>
+                <label>Core Human Capital Management</label>
+            </value>
+            <value>
+                <fullName>People Experience</fullName>
+                <default>false</default>
+                <label>People Experience</label>
+            </value>
+            <value>
+                <fullName>Benefits</fullName>
+                <default>false</default>
+                <label>Benefits</label>
+            </value>
+            <value>
+                <fullName>Payroll</fullName>
+                <default>false</default>
+                <label>Payroll</label>
+            </value>
+            <value>
+                <fullName>Learning</fullName>
+                <default>false</default>
+                <label>Learning</label>
+            </value>
+            <value>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+                <label>Recruiting</label>
+            </value>
+            <value>
+                <fullName>Talent Management</fullName>
+                <default>false</default>
+                <label>Talent Management</label>
+            </value>
+            <value>
+                <fullName>Spend Management</fullName>
+                <default>false</default>
+                <label>Spend Management</label>
+            </value>
+            <value>
+                <fullName>Vendor Management Solution - LDP</fullName>
+                <default>false</default>
+                <label>Vendor Management Solution - LDP</label>
+            </value>
+            <value>
+                <fullName>Core Financials</fullName>
+                <default>false</default>
+                <label>Core Financials</label>
+            </value>
+            <value>
+                <fullName>Planning &amp; Analytics</fullName>
+                <default>false</default>
+                <label>Planning &amp; Analytics</label>
+            </value>
+            <value>
+                <fullName>Projects &amp; Project Billing</fullName>
+                <default>false</default>
+                <label>Projects &amp; Project Billing</label>
+            </value>
+            <value>
+                <fullName>Time &amp; Scheduling</fullName>
+                <default>false</default>
+                <label>Time &amp; Scheduling</label>
+            </value>
+            <value>
+                <fullName>Legacy SKU</fullName>
+                <default>false</default>
+                <label>Legacy SKU</label>
+            </value>
+            <value>
+                <fullName>Legacy Products</fullName>
+                <default>false</default>
+                <label>Legacy Products</label>
+            </value>
+            <value>
+                <fullName>Cloud Platform</fullName>
+                <default>false</default>
+                <label>Cloud Platform</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Student</fullName>
+                <default>false</default>
+                <label>Student</label>
+            </value>
+            <value>
+                <fullName>Commiitted Usage Group LE</fullName>
+                <default>false</default>
+                <label>Commiitted Usage Group LE</label>
             </value>
         </valueSetDefinition>
     </valueSet>

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Bundle_Rule_Type__c</fullName>
+    <fullName>Include_in_Analytics_ACV__c</fullName>
     <defaultValue>false</defaultValue>
+    <description>Include in Analytics ACV</description>
     <externalId>false</externalId>
-    <label>Bundle Rule Type</label>
+    <inlineHelpText>Include in Analytics ACV</inlineHelpText>
+    <label>Include in Analytics ACV</label>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Checkbox</type>

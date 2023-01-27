@@ -1,13 +1,4 @@
 {
-    "Apttus_Config2__PriceListItem__c" : "Apttus_Config2__ProductId__c,Apttus_Config2__PriceListId__c",
-    "Apttus_Config2__ClassificationHierarchy__c" : "Apttus_Config2__HierarchyId__c,Apttus_Config2__AncestorId__c,Apttus_Config2__ProductAttributeGroupId__c",
-    "Apttus_Config2__ProductOptionGroup__c" : "Apttus_Config2__OptionGroupId__c,Apttus_Config2__ProductId__c,Apttus_Config2__ProductAttributeGroupMemberId__c,Apttus_Config2__RootOptionGroupId__c",
-    "Apttus_Config2__ProductClassification__c" : "Apttus_Config2__ClassificationId__c,Apttus_Config2__ProductId__c",
-    "Apttus_Config2__ProductOptionComponent__c" : "Apttus_Config2__ComponentProductId__c,Apttus_Config2__ParentProductId__c,Apttus_Config2__ProductOptionGroupId__c",
-    "Apttus_Config2__PriceRule__c" : "Apttus_Config2__RulesetId__c,Apttus_Config2__Dimension1Id__c,Apttus_Config2__Dimension2Id__c",
-    "Apttus_Config2__PriceRuleEntry__c" : "Apttus_Config2__PriceRuleId__c"
-}
-{
     "Apttus_Config2__PriceListItem__c" : "Apttus_Config2__PriceListId__c",
     "Apttus_Config2__ClassificationHierarchy__c" : "Apttus_Config2__HierarchyId__c,Apttus_Config2__AncestorId__c,Apttus_Config2__ProductAttributeGroupId__c",
     "Apttus_Config2__ProductOptionGroup__c" : "Apttus_Config2__OptionGroupId__c,Apttus_Config2__ProductId__c,Apttus_Config2__ProductAttributeGroupMemberId__c,Apttus_Config2__RootOptionGroupId__c",
